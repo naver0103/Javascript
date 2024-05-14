@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>구구단</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>"+"구구단"+"</h1>")
+        // for(let i=2; i<=9; i++){
+        //     document.write("<p>");
+        //     document.write("<h3>"+i+"단"+"</h3>");
+        //     for(let j=1; j<=9; j++){
+        //         result = i*j;
+        //         document.write(i+"x"+j+"="+result);
+        //         document.write("<br>");
+        //     }
+        //     document.write("</p>");
+        // }
+      
+        let i=prompt("몇단을 알아볼까요?");
+        if (i > 9){
+            alert("9단까지만 가능합니다.");
+        }
+        else{
+            document.write("<p>");                //단락을 주기
+            document.write("<h3>"+i+"단"+"</h3>");
+            for(let j=1; j<=9; j++){
+                result = i*j;
+               
+                document.write(i+"x"+j+"="+result);
+                document.write("<br>");
+            }
+            document.write("</p>");               //단락의 끝
+        }
+    </script>
+    
+</body>
+</html>
+

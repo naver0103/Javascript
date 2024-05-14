@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let value = prompt("과일은?")
+       
+        // switch(value)
+        // {
+        //     case"바나나"://value
+        //         document.write("바나나"+"<br>"+"<img src='data:image/jpeg;base64,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' alt='바나나'>");
+                    // break;
+        //     case"사과"://value
+        //         document.write("사과"+"<br>"+"<img src='https://search.pstatic.net/sunny/?src=https%3A%2F%2Fc.pxhere.com%2Fphotos%2Fab%2Feb%2Fappetite_apple_calories_catering_cherry_closeup_colorful_delicious-819584.jpg%21d&type=sc960_832' alt='사과'>");
+                    // break;
+        //     default:
+        //         document.write("유효하지않음");
+
+        // }
+
+        let val_0 = ("노트북");
+        let val_1 = ("청소기");
+        let val_2 = ("컴퓨터");
+        let val_3 = ("트럭");
+        let val_4 = ("건조기");
+        let val_5 = ("도깨비방망이");
+        let val_6 = ("한우세트");
+        let val_7 = ("그래픽카드");
+        let val_8 = ("비트코인");
+        let val_9 = ("머니");
+        let val_10 = ("자전거");
+        let val_11 = ("아파트");
+        // let val_12 = ("꽝")
+
+        /*
+        0 : 노트북
+        1 : 청소기
+        2 : 컴퓨터
+        3 : 트럭
+        4 : 건조기
+        5 : 도깨비방망이
+        6 : 한우세트
+        7 : 그래픽카드
+        8 : 비트코인
+        9 : 머니
+        10 : 자전거
+        11 : 아파트
+        12 : 꽝
+        //
+        */
+        let val = 0;
+
+
+        // 0<=Math.random()<1
+        // 0*13<=Math.random()*13<(1*13)
+        // 0<=                   <12.9999
+        // document.write(parseInt(Math.random()*13));
+
+        val = parseInt(Math.random()*13);
+        document.write(val);
+            switch(val){
+        
+            case 0: 
+                document.write("노트북"+"<br>"+"<img src='https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_4565547%2F45655472946.jpg&type=f372_372' alt='노트북'>");
+                break;
+            case 1:
+                document.write("청소기"+"<br>"+"<img src='https://search.pstatic.net/sunny/?src=https%3A%2F%2Fus.123rf.com%2F450wm%2Fmearicon%2Fmearicon1601%2Fmearicon160100114%2F50381642-%25EC%25A7%2584%25EA%25B3%25B5-%25EC%25B2%25AD%25EC%2586%258C%25EA%25B8%25B0.jpg&type=a340' alt='청소기'>");
+                break;            
+            case 2:
+                document.write("컴퓨터"+"<br>"+"<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMDAyMjFfMTg1%2FMDAxNTgyMjQ3MTI5MzY4.ZQ_w9Se_JzGd-jUH3AxsTxNo8XbO5TyeWzjbmo0PfREg.4ul5dF_cJP7KwVaOjuRM-sY7ceki8cBc7mEeRogqHb8g.PNG%2F88.png&type=a340' alt='컴퓨터'>");
+                break;
+            case 3:
+                document.write("트럭"+"<br>"+"<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMDAzMjNfMTcw%2FMDAxNTg0ODkxMjM2OTIy.abRCiIa5r3wmtpuK9MHVVr4B0RcfRgSEymiV3EmHn7gg.PnA79FKMIlQcL6DVa05tPdUCaPIwOAXW3mQ5USM1SPAg.PNG%2F4-2-cargo-truck-free-download-png.png&type=a340' alt='트럭'>");
+                break;
+            case 4:
+                document.write("건조기"+"<br>"+"<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjBfMjEg%2FMDAxNjMyMTQzMDgxMTM5.7qMwr18o40CulpSlGnKrDOCO1XRAX8uMpS1D1Pqh7pog.F9hedm3XIc4JXlxSERB2jtnRQ46LY2CwrSJz6_RUqSIg.PNG.kurtwiwld%2F1.png&type=a340' alt='건조기'>");
+                break;            
+            case 5:
+                document.write("도깨비방망이"+"<br>"+"<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20151216_181%2Fbuwonhr_14502277011156w5Ha_JPEG%2F%25C7%25F6%25B4%25EB%25C8%25A8%25BC%25EE%25C7%25CE.jpg&type=a340' alt='도깨비방망이'>");
+                break;  
+            case 6:
+                document.write("한우세트"+"<br>"+"<img src='https://search.pstatic.net/sunny/?src=https%3A%2F%2Fd2x8kymwjom7h7.cloudfront.net%2Flive%2Fapplication_no%2F96001%2Fdefault%2F08e869b2a81f4ccfbd044de6db75113b.jpg&type=a340' alt='한우세트'>");
+                break;            
+            case 7:
+                document.write("그래픽카드"+"<br>"+"<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2FMjAyMzA2MzBfMTQ1%2FMDAxNjg4MTE3MzQxNzQx.R4QQusYXfjSq4kHX5wzSZlokNLHWyDYHe2WW9_fauHIg.2ETf1IlLT20_ZrBUewHSAgLm4Y-hQuR6ci8rcf-PLNkg.JPEG%2FIU578IGkVP8J6CRKHfk7UkeqFn0E.jpg&type=a340' alt='그래픽카드'>");
+                break;
+            case 8:
+                document.write("비트코인"+"<br>"+"<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMjlfMjE2%2FMDAxNzA2NTM3MjExODQ4.ShmTOyVXZXTeMR92aesAqQ-nXP-KsEn3EsshhSfZeXkg.ySpwEF3s4786WSb0sTCdyVh3sn7OpAVEeJvIDETqaVUg.PNG.aulloss%2F%25BA%25F1%25C6%25AE%25C4%25DA%25C0%25CE.png&type=a340' alt='비트코인'>");
+                break;
+            case 9:
+                document.write("머니"+"<br>"+"<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F003%2F2023%2F09%2F25%2FNISI20230925_0020052192_web_20230925140429_20230925140611486.jpg&type=a340' alt='머니'>");
+                break;            
+            case 10:
+                document.write("자전거"+"<br>"+"<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMjZfMTYy%2FMDAxNzAzNTIxOTEyNTEw.1nMLXngeTORJtgbL0BLonnjexHgbbpbwUAti06kd1BYg.SKcj97y7s2TCBtxtIFXu1KDjlgypnDCqOTNGUO4MqQkg.PNG.rkdanf7081%2Fimage.png&type=a340' alt='자전거'>");
+                break; 
+            case 11:
+                document.write("아파트"+"<br>"+"<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMjNfMjg0%2FMDAxNzAzMzE4OTIwNzA4.I9ryY1qhNSeooDVAuVVFhqB0BzB6nPcyBxDT6qfdvkEg.y6yyr_YJyo1Dkm_V_JCGJa5YXEEjtjF5zZzwouUf6P4g.JPEG.dasanpartner%2FKakaoTalk_20220912_162814495_15.jpg&type=a340' alt='아파트'>");
+                break; 
+            default:
+                //꽝꽝
+        }
+        document.write("<h1> 축하합니다. 당첨되셨습니다.");
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

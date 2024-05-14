@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>좌석</title>
+    <style>
+        
+  
+
+            /* 첫 번째 열의 버튼을 색으로 설정 */
+            button:nth-of-type(8n+1) {
+                color:gold;                
+            }
+            /* 두 번째 열의 버튼을 색으로 설정 */
+            button:nth-of-type(8n+2) {
+                color:salmon;
+            }
+    
+            button:nth-of-type(8n+3) {
+                color:seagreen;
+            }
+            button:nth-of-type(8n+4) {
+                color:rgb(64, 25, 240);
+            }
+
+    </style>
+</head>
+<body>
+        
+        <div id="container">
+            좌석 80개 만들기<br>
+        </div>
+    
+    <script>
+        let seatNo = 80;
+        let row = 10;
+        let col = 8;
+        const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];  //10열이므로 A~J까지 나열
+        for (let i=0; i<row; i++){           
+            for (let j=0; j<col; j++){
+                //(i+1의 값이 1~9까지는 앞에 0을 붙여주고, 10은 0이 안 붙은채로):3항연산자
+                //A열 j+
+                
+                const seatNo = i * col + j + 1;
+                if(seatNo > 80) break;
+                const button = document.createElement("button");
+                // 버튼에 텍스트 설정 (알파벳 + 숫자)
+                button.innerText = columns[j] + (i < 9 ? "0" + (i + 1) : i + 1);
+                // 버튼을 container에 추가
+                document.getElementById("container").appendChild(button);               
+            }
+            // 줄 바꿈을 위한 <br> 태그 추가
+            document.getElementById("container").appendChild(document.createElement("br"));
+        }
+
+
+
+
+
+        // 버튼을 만들기 위한 알파벳 배열
+        // const columns  = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+
+        //버튼을 만들기 위한 숫자 배열
+        const numbers = ["01", "02", "03", "04", "05", "06", "07", "08"];
+
+        // 버튼을 담을 div 요소 가져오기
+        const container = document.getElementById("container");
+
+        // 각 알파벳 별로 버튼 생성
+        alphabet.forEach((letter) => {
+            // 알파벳 별로 버튼을 감싸는 div 요소 생성
+            const letterDiv = document.createElement("div");
+            
+            // 각 숫자에 대한 버튼 생성 및 설정
+            numbers.forEach((number) => {
+                // 버튼 생성
+                const button = document.createElement("button");
+                // 버튼에 텍스트 설정 (알파벳 + 숫자)
+                button.innerText = letter + number;
+                // 버튼을 div 요소에 추가
+                letterDiv.appendChild(button);
+            });
+            
+            // 알파벳 별로 생성한 버튼을 container에 추가
+            container.appendChild(letterDiv);
+        });
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

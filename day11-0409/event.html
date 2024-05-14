@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<body>
+    <!-- onclick(), ondblclidk(), onmouseover() -->
+    <!-- <button onclick="alert('클릭')">나는 버튼</button> -->
+    <!-- <button onmouseover="myDo()">나는 버튼!</button> -->
+    <button id="btn">나는 버튼!</button>
+
+    <script>
+        function myDo(){
+            alert('클릭');
+        }
+        let btn = document.getElementById("btn");
+        btn.onclick=function(){
+            btn.style.backgroundColor="gold";
+        }
+        btn.onmouseover=function(){
+            btn.style.color="red";
+        }
+        btn.onmouseout=function(){
+            btn.style.color="blue";
+        }
+
+    </script>
+    
+</body>
+</html>

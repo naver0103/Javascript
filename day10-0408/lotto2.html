@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>gpt_lotto</title>
+</head>
+<body>
+    <script>
+        function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function checkNum(arr, num) {
+        return arr.includes(num);
+        }
+        let lottoArray = [];
+        while (lottoArray.length < 6) {
+            let rndNum = getRandomInt(1, 45);
+            if (!checkNum(lottoArray, rndNum)) {
+                lottoArray.push(rndNum);
+            }
+        }
+        lottoArray.sort((a, b) => a - b); // 숫자를 오름차순으로 정렬
+        document.write("로또 번호:", lottoArray);
+
+
+    </script>
+    
+</body>
+</html>

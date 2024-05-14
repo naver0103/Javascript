@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+            margin-left: 1px;             
+        }
+        .gong{
+            width: 400px;
+            height:150px;
+            background-color:beige;
+            border-radius: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+           
+        }
+        li>.date{
+            text-align: right;
+            margin-right: 20px;
+        }
+        .date {
+        float: right; /* 오른쪽으로 부유(floating) */
+        }
+        /* .text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: deepskyblue;
+        } */
+        li:nth-child(2n){
+            background-color:aliceblue;                   
+        }
+        .modal{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(red, green, blue, alpha);
+            position: absolute;
+            
+            top:0;
+            left:0;
+            z-index: 2;
+        }
+        .popup{
+            width: 400px;
+            height: 250px;
+            background-color: yellow;
+            position: absolute;
+            transform:trsnslate(-50%,-50%);
+            top:30%;
+            left:40%;
+            z-index: 3;
+        }
+        .title{
+            text-align: left;
+            padding-top: 10px;
+        }
+        .content{
+            padding:10px;
+            text-align: justify;
+        }
+        #close{
+            position: relative;
+            left:350px;
+            top:0px;
+        }
+        .modal, .popup {
+            display: none;
+        }
+        h3 {
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gong">
+        <h3>공지사항</h3>
+        <ul>
+            <li><span class="text">한국투어 홈페이지 개편 안내</span><span class="date">2022.03.01</span></li>
+            <li><span class="text">여행 이벤트 상품을 드립니다.</span><span class="date">2022.03.01</span></li>
+            <li><span class="text">렌트 이용 시 주의해 주세요.</span><span class="date">2022.03.01</span></li>
+            <li><span class="text">제주도 여행권 할인 안내</span><span class="date">2022.03.01</span></li>
+        </ul>
+    </div>
+    <div class="modal">
+        <div class="popup">
+            <div class="title"><h3>여행패키지 이벤트 안내</h3></div>
+                <div class="content">
+                    <p>
+                        명승지나 고적지를 중심으로 한 국내 여행 패키지<br>상품이 출시되었습니다.
+                        여행 패키지 예약 후 SNS에<br> 공유한 사진을 보내주시면 추첨을 통해 국내
+                        여행<br> 패키지 할인권을 드립니다. 많은 응모 바랍니다.
+                    </p>
+                </div>
+                <button id="close">닫기</button>
+        </div>
+    </div>
+
+    <script>
+        let lisTag = document.querySelectorAll("li")
+
+        for(let i=0; i<lisTag.length; i++){
+            lisTag[i].onmouseover=function(){
+                lisTag[i].style.fontWeight="900";
+                this.style.cursor  = "pointer"
+            };
+            lisTag[i].onmouseout=function(){
+                this.style.fontWeight="400";
+            };
+            if(i%2  == 1){
+                lisTag[i].style.backgroundColor="gold";
+            }
+        }
+
+        lisTag[0].onclick=function(){
+            //첫번째 목록을 클릭하면, 팝업이 보여져야함.
+            //전체화면을 비활성화처럼 꾸며주자.
+            //팝업을 만들자
+            let modal = document.querySelector(".modal");
+            modal.style.display = "block";
+            let popup = document.querySelector(".popup");
+            popup.style.display = "block";
+        };
+        let closeBtn = document.querySelector("#close");
+        closeBtn.onclick = function(){
+            let modal = document.querySelector(".modal");
+            modal.style.display = "none";
+            let popup = document.querySelector(".popup");
+            popup.style.display = "none";
+        };
+
+        //DOM요소에 접근하고 속성 가져오기
+        let closeElement = document.getElementById("close");
+        closeElement.style.backgroundColor="red";
+        let dateElements = document.getElementsByClassName("date");
+        dateElements[0].style.color="red";
+        dateElements[1].style.color="seagreen";
+        for (let i = 2; i<4; i++){
+            dateElements[i].style.color="red";
+        }
+
+        let textElements = document.getElementsByClassName("text");
+        for(let j = 0; j<4; j++){
+            textElements[j].style.color="deepskyblue";
+        }
+        
+
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

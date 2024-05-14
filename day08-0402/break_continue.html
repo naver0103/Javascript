@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i,j;
+        let sum=0;
+        
+        for(i=2; i<=9; i++){
+            
+            // if(i===3) continue;   //이 단만 빼기
+            document.write("<div>");
+            document.write("<h3>"+i+"단</h3>");
+                for(j=1; j<=9; j++){
+                    // if(j===4)continue;         //이 값만 빼기
+                    let k=i*j;
+                    document.write(i+" x "+j+"="+i*j+"======>"+(i*j)+k+"<br>"); 
+                    result +=i*j
+                    
+                }
+            document.write("</div>");
+            if(i===4)break;    //여기까지 수행
+        }
+
+    </script>
+
+
+    
+</body>
+</html>

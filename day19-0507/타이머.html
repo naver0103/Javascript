@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>수업시작 타이머</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 200px;
+            line-height: 150px;
+            border: 1px solid black;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    </div>
+    <div>
+        <button id = "btn">수업시작</button>
+        <img id="img" src = "bell1.png" alt = "bell">
+    </div>
+    
+    <script>
+        let box = document.getElementById("box");
+        setInterval (timeHandler,1000);             
+        function timeHandler(){
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds =date.getSeconds();
+
+            document.write((date.getMinutes() + 10  )+"");
+
+            let str = hours+":"+minutes+":"+seconds;
+                // document.write(str);
+            box.innerHTML="<h1>"+str+"</h1>";
+
+            let img = document.getElementById("img");
+                if ( img.getAttribute("src") == "../images/bell1.png"){
+                    img.setAttribute("src", "../images/bell2.png");
+                }
+                else{
+                    img.setAttribute("src", "../images/bell1.png");            
+                }
+
+
+
+            let pressedDate = null; //가리키는 곳이 없음.
+            //버튼이 클릭되면          
+            let btn = document.getElementById("btn");
+
+            btn.addEventListener("click", function() {
+                let pressedDate = new Date();   //버튼이 눌린 시간을 기록하고
+                //50분뒤인 쉬는 시간을 구하자.
+                pressedDate.getMilliseconds();//+50분*60초*1000ms
+            });
+
+            //"쉬는시간 : 48분뒤, 47분뒤, "을 버튼에 표시함
+
+            //50분뒤에는 벨 이미지가 보여야함.
+            //버튼은 쉬는시간 -->수업시작 이라고 표시되어야함.
+            
+        }
+
+</script>
+
+</body>
+</html>

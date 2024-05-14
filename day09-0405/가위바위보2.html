@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>     
+         /*
+        0 : 가위
+        1 : 바위
+        2 : 보
+        0.0<=parseInt(Math.random()*3)<1.0*3
+        0.0<=        <3.0
+        */
+
+    do {
+        let input=prompt("가위, 바위, 보를 입력하세요. 끝내려면 'end'를 입력하세요.");
+
+        
+            /*=====================================컴퓨터가 낼 손=====*/    
+                let num = parseInt(Math.random()*3);
+                let imageArray1 = ['a01.png', 'b02.png', 'c03.png'];
+                document.write('<img src='+imageArray1[num]+' alt="">');
+            /*======================================내가 입력낼 손=====*/
+                document.write("VS");
+                let imageArray2 = ['a01.png', 'b02.png', 'c03.png']; 
+                if(input==="가위"){
+                    document.write('<img src='+imageArray2[0]+' alt="">');
+                }
+                else if(input==="바위"){
+                    document.write('<img src='+imageArray2[1]+' alt="">');
+                }
+                else if(input==="보"){
+                    document.write('<img src='+imageArray2[2]+' alt="">');
+                }
+             
+
+        }
+        while (input !== "end")
+    </script>
+    
+</body>
+</html>

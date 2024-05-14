@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Event2</title>
+    <style>
+        div{
+            width:50px;
+            height:50px;
+            background-color: rgb(5, 117, 115);
+            margin-top:10px;
+            line-height: 50px;
+            text-align:center;
+            font-weight:bold;
+            font-size: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <button id="btn"><h1>나는 버튼</h1></button>
+    <div id="rect">네모</div>
+
+    <script>
+        //네모위에 마우스 오버되면 백그라운드 색을 gold로 셋팅하자.
+        // 1. 요소찾기, id rect찾아서
+        // 2. 변수에 할당(이제부터 변수는 해당 요소를 대신해서 JS에서 사용됨)
+        // 3. 변수로 핸들링. 백그라운드 색을 gold로 지정하자.        
+
+        function myDo(){
+            alert('클릭');
+        }
+        let btn = document.getElementById("btn");
+        let temp = true;
+        btn.onclick=function(){
+            if (temp==true){//참이면 yellow 
+                btn.style.backgroundColor="gold";
+            }
+            else (temp==false){            
+                btn.style.backgroundColor="yellow";
+            }
+            temp = !temp;
+        }    
+          
+
+ 
+        // btn.onmouseover=function(){    //마우스가 오버시
+        //     btn.style.backgroundColor="gold";
+        // }
+ 
+
+
+    </script>
+    
+</body>
+</html>

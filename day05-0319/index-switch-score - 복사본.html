@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>switch-score</title>
+</head>
+<body>
+    <script>
+        //점수를 입력하면 수우미양가를 판단해서 알려주는 프로그램
+        //90~100 수
+        //80~89  우
+        //70~79  미
+        //60~69  양
+        //59이하 가
+
+        //1.prompt()로 점수를 입력 받으세요.
+        //2.switch(값) {
+            //     case 값1:
+            //     case 값2:
+            //         "판단결과"
+            //         break;
+            // }
+
+        let val = prompt("점수를 입력하세요.");
+        val = parseInt(val);   //문자열을 숫자로 변형
+        document.write(val);
+            switch(true)
+            {
+                case val >= 90 :
+                    document.write("수");
+                    break;                
+                case val >= 80 : 
+                    document.write("우");
+                    break;         
+                case val >= 70 : 
+                    document.write("미");
+                    break;
+                case val >= 60 : 
+                    document.write("양");
+                    break;
+                case val < 60:
+                    document.write("가");
+                    break;
+                default:
+  
+             }
+           
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

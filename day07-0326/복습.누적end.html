@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>누적</title>
+</head>
+<body>
+    <script>
+     
+        // let numSum = prompt("숫자를 입력하세요.")
+
+        // while (numSum != "end"){
+        //     numSum = 0;
+        //     let numSum = prompt("숫자를 입력하세요.")
+        //     result = numSum+numSum;
+        // }
+        // document.write(result);
+
+/*
+        let numSum = 0; // 초기값 0으로 설정
+        let count=0; //입력의 순번을 기억하는 변수
+
+        while (true) { // 무한 루프
+            count++;
+            let input = prompt(count+"번째 입력. 숫자를 입력하세요. 'end'를 입력하면 종료됩니다.");
+            if (input === "end") {
+                break; // 'end'가 입력되면 루프 종료
+            }
+            let number = parseFloat(input); // 문자열을 숫자로 변환
+            if (!isNaN(number)) { // 유효한 숫자인지 확인
+                numSum += number; // 입력된 숫자를 누적
+            } else {
+                alert("유효한 숫자를 입력하세요."); // 숫자가 아닌 값이 입력된 경우 알림 표시
+            }
+        }
+        document.write("누적된 합: " + numSum); // 결과 출력
+*/
+
+
+        let count=0; //입력의 순번을 기억하는 변수
+        let sum=0; //입력받은 숫자들을 합해서 기억하는 변수
+        let data=""; //입력받은 값을 임시저장할 변수
+
+        while(true){
+            count++;
+            data = prompt(count+"번째 입력");
+            if(data==="end"){
+                break;
+            }
+            sum+=parseInt(data);
+        }   
+        document.write("현재 합은 = "+sum);
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

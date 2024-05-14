@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>나의 체질량지수(BMI)</title>
+    <style>
+        input{
+            text-align: center;
+        }
+
+        #result{
+            width:100px;
+            height:90px;
+            line-height:10px;
+            /* border: 1px solid rgb(134, 132, 132);
+            margin-top: 10px; */
+            text-align: left;
+            margin-left: 50px;
+            
+        }
+        #border{
+            width:700px;
+            height:100px;
+            line-height:100px;
+            border:1px solid gray
+            margin-top 10px;
+            text-align:center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="border">
+        <label for = "height">신장</label>
+        <input type= "text" id="height" name="height">
+        cm /&nbsp;
+        <label for = "weight">체중</label>
+        <input type="text" id="weight" name="weight">
+        kg&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+
+        <input type="button" value="계산" onclick="doBMI()">
+        <input type="button" value="초기화" >
+
+        <!-- <input type = "checkbox">
+        <input type ="radio">
+        <input type = "reset">
+        <input type ="submit"> -->
+
+        <div id = "result">
+            <h4>비만도 결과</h4>              
+            <h4>BMI지수</h4>
+        </div>
+
+    
+
+    </div>
+
+    <script>
+        function doBMI(){
+            //신장에 입력되는 값을 핸들링하려면, input태그를 찾아와야함. querySelector
+            let heightTag=document.querySelector("#height");
+            heightTag.value;
+            let weightTag = document.querySelector("#weight");
+            weightTag.value;
+            let bmi = calcBmi(heightTag.value, wieghtTag.value); //bmi지수 구하기공식=(몸무게/(키*키)) //키는 m단위.
+            // let result = checkLevel(bmi); //비만, 정상, 저체중 판단해 오는 함수
+            let result = "완전비만";
+            let result2Tag = document.querySelector("#result2");
+            result2Tag.innerHTML = '<h1>'+result+'<h1>';
+            let result3Tag = document.querySelector("#result3");
+            result3Tag.innerHTML = bmi;
+        }
+
+    </script>
+    
+</body>
+</html>

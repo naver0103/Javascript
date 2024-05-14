@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>isNan</title>
+</head>
+<body>
+    <script>
+        //문자가 입력되면 "숫자를 입력하세요."를 출력하시오.
+        let num = "2024a"
+        // document.write(isNaN(num)); //Not a number true
+        isNaN(num); //isNaN("2024a")//true
+                    //isNaN("2024")//false
+                    //Math.random(), 2024 = parseInt("2024"),
+                    //isNaN("abc")//true    isNaN("23")//false
+
+        let input = prompt("값을 입력하세요");
+        //값이 숫자로만 구성되면 OK.alert로 input값 보여주기
+        //값이 문자가 구성되어있으며, NG, alert으로 "숫자를 입력하세요."
+
+
+        if (isNaN(input)){
+            alert("NG");
+            alert("숫자를 입력하세요.");
+            let input = prompt("값을 입력하세요");
+                    if (isNaN(input)){
+                        alert("NG");
+                    }
+                    else {
+                        alert("OK");
+                    }
+        }
+        else {
+            alert("OK");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>    
+</body>
+</html>

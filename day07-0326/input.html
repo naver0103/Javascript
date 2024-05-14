@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- input이라는 태그는 내부에 value라는 변수를 가지고 입력된 값을 저장하더라 -->
+    <input id="A" type="text">
+    <input id="B" type="button" value="클릭!">
+    <!-- <input type="color">
+    <input type="number"> -->
+
+    <script>
+        //컴퓨터와 소통하려면 일단 변수에 담고 봐야한다.
+        let A=document.getElementById("A");
+        let B=document.getElementById("B");
+        // console.log((A));
+        B.addEventListener("click",function(){
+            console.log(A.value);
+        });
+
+    </script>
+
+</body>
+</html>

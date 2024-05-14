@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>do-while</title>
+    </head>
+    <body>
+        <script>
+            // do{
+
+            // }
+            // while(조건식);
+            
+            // id와 pw를 받아서 
+            // id="iot"이고 pw는 "8888"이면
+            // "go~!" alert()을 보여주자.    
+            // 아니면 다시 로그인 정보를 받아보자.
+
+            let id = "";
+            let pw = "";
+            do{
+                id = prompt("id를 입력하세요.");
+                    if(id==null || id!="iot"){
+                        break;  //반복문 안에서 사용
+                    }
+                    else{
+                    document.write(id);
+                    pw = prompt("pw를 입력하세요.");
+                    if(id==null || pw == null);
+                        break;
+                    }
+            }
+            while(!(id == "iot" && pw == "8888"));
+
+            //id와 pw값이 일치해서 go~!
+            document.write("<br>go~!")
+
+            //////////////////////////////////////
+
+            // do{
+            //     id=prompt("id를 입력하세요.");
+            // }
+            // while(id!="iot");
+
+            
+
+
+
+
+
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>화살표함수</title>
+</head>
+<body>
+    <script>
+        //화살표함수//익명함수만 사용!!!
+        //  (매개변수) => { 함수 내용}
+
+        //let sum2 = function (a,b){
+        //        return a+b;
+        //}
+
+        let sum2 = (a,b) => {return a+b};
+        let sum3 = (a,b) => a+b; //한줄 표현이라, {} 생략가능, return생략가능
+        document.write("*****<br>");
+        document.write(sum3(1,2)+"<br>");
+
+        let sum4 = function(){
+            document.write("iot");
+        }
+        let sum5 = ()=>{document.write('iot')};
+        let sum6 = ()=>document.write('iot');//중괄호 안에 1분장이라 생략가능.
+        document.write("----"+"<br>");
+        sum6();
+        document.write("----"+"<br>");
+
+        let hi = function(user){
+            document.write(user+"님, 안녕하세요?");
+        }
+
+        let hi2 = (user) =>{document.write(user+"님, 안녕하세요?");
+        }
+        hi2("고길동");
+
+    </script>
+    
+</body>
+</html>

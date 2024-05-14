@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>넓이구하기 함수</title>
+</head>
+<body>
+    <h1>넓이 구하기</h1>
+    <script>
+        let width;
+        let height;
+        let area;
+        let triArea;
+
+        
+        
+        function input(str, str2){
+            width = parseInt(prompt(str+"의 길이를 입력하세요."));
+            height = parseInt(prompt(str2+"의 길이를 입력하세요."));
+            
+            area = width*height;
+        }        
+        // let width = parseInt(prompt("가로의 길이를 입력하세요."));
+        // let height = parseInt(prompt("세로이 길이를 입력하세요."));
+        // let width2 = parseInt(prompt("가로의 길이를 입력하세요."));
+        // let height2 = parseInt(prompt("세로이 길이를 입력하세요."));
+        // let area2 = width2*height2;
+        // document.writeh("정사각형의 넓이는 "+area2+"입니다.");
+
+        input("가로","세로");
+        document.write("직사각형의 넓이는 "+area+"입니다."); 
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

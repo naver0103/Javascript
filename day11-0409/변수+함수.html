@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hello(name){
+            document.write(name+"iot"+"<br>");
+        }
+        hello("javascript"); //javascriptiot
+
+        let func = hello;
+        func("javascript");
+
+        let myfunc = hello;
+        myfunc("javascript");
+        
+
+        function printStar(count){
+            
+            for(i=0; i<count; i++){ //***** count개수만큼 *출력.
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        printStar(3);
+      
+        let yourFunc = printStar;
+        //함수호출하세요.
+        yourFunc(4);
+     
+
+//============================================================================
+        //익명함수
+        let sum = function (a,b){
+            return a+b;
+        }
+        document.write("<br>"+sum(1,2));    //자기가 함수인양...
+
+        //익명함수 즉시실행 방법, 함수정의 전체를 ()로 묶어주었음.
+
+        (function(){
+            document.write("<br>iotiotiot");
+        }());  
+
+        //매개변수 있는 익명함수의 즉시 실행방법
+        (function(a,b){
+            return a+b;
+        }(2, 3));
+
+        //익명함수
+        // document.write("<br>hello");
+        // document.write(a*b-c);
+
+        (function(){
+            document.write("<br>hello");
+        }());
+        document.write("<br>");
+        let result = (function(a,b,c){
+            return a*b-c;
+        }(2, 3, 1));
+        document.write(result);
+
+
+        //익명함수
+        (function(){
+            document.write("<br>hello");
+        }()); //함수정의 후 실행
+
+        (function (a,b,c,){
+            document.write("<br>연산결과 : "+(a,b,c));
+        }(2,3,1));
+
+    
+
+    </script>
+    
+</body>
+</html>

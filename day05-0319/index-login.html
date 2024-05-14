@@ -1,0 +1,42 @@
+<!-- //2. 사용자 아이디를 입력받아
+//아이디가 "student"이면 "<h1>환영합니다.</h1>"메시지를 출력하고
+//"student"가 아니면 "운영자가 아닙니다." 메시지를 출력하시오.
+//document.write()로 출력 
+//아이디가 student 이고 pw가 8888이면 "IoT과 학생입니다."
+//그렇지 않으면 IoT과 학생이 아닙니다.-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+    <script>
+        let input_id = prompt("아이디를 입력하세요");
+        if (input_id == "student"){
+            let input_pw = prompt("비밀번호를 입력하세요.");   
+                if(input_pw == "8888") {
+                    document.write("<h1>환영합니다.</h1>");
+                    document.write("IoT학과 학생입니다.")
+                }
+                else {
+                    let input_pw = prompt("비밀번호가 틀립니다. 비밀번호를 다시 입력하세요.")   //기회를 한번 더 부여
+                        if (input_pw !== "8888"){
+                            document.write("IoT학과 학생이 아닙니다.")
+                        }
+                        else {
+                            document.write("<h1>환영합니다.</h1>");
+                            document.write("IoT학과 학생입니다.")
+                        }
+                }
+        }
+        else {
+            document.write("운영자가 아닙니다.");
+        }
+    </script>
+</body>
+</html>
+
+
+

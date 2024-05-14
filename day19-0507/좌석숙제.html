@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>좌석예약숙제</title>
+    <style>
+        body{
+            width : 1080px;
+        }
+        div{
+            border: 1px solid  #eee;
+            background-color : rgb(0, 225, 255);
+            width : 70px;
+            height : 100px; 
+            line-Height : 100px;
+            text-align : center;
+            margin-right : 5px;
+            margin-bottom: 5px;
+            display : inline-block; 
+                     
+        }
+
+    </style>
+</head>
+<body>
+    <script>     
+        let col = 10;          
+        let row = 5;          
+        //==================================================
+        const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];  //10열이므로 A~J까지 나열
+        for (let i=0; i<row; i++){           
+            for (let j=0; j<col; j++){
+                //(i+1의 값이 1~9까지는 앞에 0을 붙여주고, 10은 0이 안 붙은채로):3항연산자
+                //A열 j+
+                
+                const seatNo = i * col + j + 1;
+                if(seatNo > 50) break;
+                document.write("<div>"+columns[j]+"열"+(i+1)+"번"+"</div>");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+
+
+        
+    </script>
+</body>
+</html>

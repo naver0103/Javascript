@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 생성</title>
+</head>
+<body>
+    <h1>DOM을 공부합시다</h1>
+    <a href="#">구글사이트</a>
+    <div id="info">
+        <p>DOM은 document object model의 줄임말입니다.</p>
+    </div>
+    <script>
+        //1. Element(태그 혹은 요소) 생성
+        let newP = document.createElement("p");
+        //2. 위의 태그에 쓰일 테스트노드 생성
+        let textNode = document.createTextNode("어렵게 만든 DOM은 document object model의 줄임말입니다.");
+        //3. element와 텍스트노드와의 관계 설정
+        newP.appendChild(textNode);
+        //4. newP를 div부모에 appendChild()로 연결해주기
+        //부모인 div를 찾아오기
+        let myParent = document.getElementById("info");
+        myParent.appendChild(newP);
+
+        //1. img태그형성
+        let newImg = document.createElement("img");//요소생성
+        //2. alt, src 속성 노드 추가
+        let srcNode = document.createAttribute("src");//속성 생성
+        let altNode = document.createAttribute("alt");
+        srcNode.value = "../images/doll.png";
+        altNode.value = "구글사이트";
+        newImg.setAttributeNode(srcNode);
+        newImg.setAttributeNode(altNode);
+        document.getElementById("info").appendChild(newImg);
+
+        //p태그를 지웁시다. 
+        //구글사이트 클릭시 .p태그 삭제하기.
+        //1. a태그를 찾아옵시다.
+        let aTag = document.getElementsByTagName("a");
+        //2. 위에서 찾은 a태그의 변수(객체).addEventListener("click", 클릭시해야할 동작)
+        aTag[0].addEventListener("click", function(){
+            if(newP != null)
+                document.getElementById("info").removeChild(newP);
+        });
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

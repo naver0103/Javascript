@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머</title>
+    <style>
+        .text{
+            width:100px;
+            height:20px;
+            border: 2px solid black;
+        }
+        .time{
+            width:600px;
+            height:20px;
+            border: 2px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button></button>
+    <button>innerHTML</button>
+    <div class="text"></div> <!--현재시각-->
+    <div class="time"></div> 
+
+    <script>
+        let btns = document.getElementsByTagName("button");
+        btns[0].addEventListener("click",function(){
+            this.innerText = "고길동버튼고길동버튼";
+        });  //작은 버튼을 누르면 텍스트가 버튼안에서 생성
+            btns[1].addEventListener("click",function(){
+            this.innerHTML = "<h1>innerHTML</h1><img src='https://img.youtube.com/vi/e0O4TZKI8kQ/maxresdefault.jpg'>";
+        });     //이미지소스를 불러와서 버튼을 누르면 이미지가 생성
+        btns[1].addEventListener("mouseover",function(){
+            this.innerHTML = "마우스올려짐";
+        });   
+        btns[1].addEventListener("mouseout",function(){
+            this.innerHTML = "마우스아웃";
+        });   
+        btns[1].addEventListener("dblclick",function(){
+            this.innerText = "innerText";
+        });   
+
+        let divs = document.getElementsByTagName("div");
+        //div.text에 현재시각 텍스트 입력해주세요.
+        divs[0].innerHTML="현재시각";
+
+        let date = new Date(); //오늘 날짜 얻을 수 있는 Date의 객체를
+        let year = date.getFullYear(); //2024//년도 값을 얻어옴.
+        let month = date.getMonth();//월을 얻어옴
+        let day = date.getDate();//일을 얻어옴.
+        let hour = date.getHours();//시를 얻어옴.
+        let dayOfTheWeek = date.getDay();
+        date.getFullYear(); //2024                    
+        //div. time에 위에서 얻은 값을 조합해서 2024년 4월 29일 10시 같이 표기될 수 있도록 할당. innerHTML에 값을 할당하자.
+        divs[1].innerHTML = year+"년"+(month+1)+"월"+date+"일"+hour+"시"+dayOfTheWeekFunc(dayOfTheWeek)+"요일";
+
+        function dayOfTheWeekFunc(week){
+            let weekStr = "";
+            switch(week){
+                case 0:
+                    weekStr = "일";
+                    break;
+                case 1:
+                    weekStr = "월";
+                    break;
+                case 2:
+                    weekStr = "화";
+                    break;
+                case 3:
+                    weekStr = "수";
+                    break;
+                case 4:
+                    weekStr = "목";
+                    break;
+                case 5:
+                    weekStr = "금";
+                    break;
+                case 6:
+                    weekStr = "토";
+
+            }
+            return weekStr;
+        };
+    
+     
+            
+              
+       
+    
+
+
+
+    </script>
+
+
+
+</body>
+</html>

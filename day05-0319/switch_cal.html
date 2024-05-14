@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>swith_cal</title>
+</head>
+<body>
+    <script>
+        let numcal_1 = prompt("첫 번째 숫자 값을 입력해 주세요.");
+            numcal_1 = parseInt(numcal_1);
+
+        let op_0 = prompt("사칙연사자 중 하나를 입력해 주세요.");
+
+        let numcal_2 = prompt("두 번째 숫자 값을 입력해 주세요.");
+            numcal_2 = parseInt(numcal_2);
+
+        let result
+            switch(op_0) {
+                case "+" : 
+                    result = numcal_1 + numcal_2;
+                    break;                
+                case "-" :
+                    result = numcal_1 - numcal_2;
+                    break;                
+                case "*" : 
+                    result = numcal_1 * numcal_2;
+                    break;
+                case "/" :
+                    result = numcal_1 / numcal_2;
+                    break;
+            }
+
+        alert(numcal_1 + op_0 + numcal_2 + "=" + result);
+      
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

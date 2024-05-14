@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>queryselector</title>
+    <style>
+        #title {
+            margin-left: 100px;
+        }
+        #prod-pic {
+            width: 200px;
+            border: 1px solid pink;
+            margin: 10px;          
+        }
+        #small {
+            width:60px;
+            height: auto;
+            float : left;    
+            border: 1px solid pink;       
+        }
+        button {
+            width: 230px;
+            height: 30px;
+            border: 2px solid black;
+        }
+        #main1, #main2 {
+            float: left;
+        }
+        #detail {
+            margin-top: 30px;           
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="title">
+            <h1>에디오피아 게뎁</h1>
+            
+        </div>
+        <div>
+            <div id="main1">
+                <div id="prod-pic">
+                    <img src="../images/coffee-pink.jpg" alt="에디오피아 게뎁" id="cup" width="200" height="200" onclick="displaySrc()">
+                </div>
+
+                <div>
+                    <img src="../images/coffee-gray.jpg" alt="에디오피아 게뎁" id="cup" width="60" height="60" onclick="displaySrc()">
+                    <img src="../images/coffee-pink.jpg" alt="에디오피아 게뎁" id="cup" width="60" height="60" onclick="displaySrc()">
+                    <img src="../images/coffee-blue.jpg" alt="에디오피아 게뎁" id="cup" width="60" height="60" onclick="displaySrc()">           
+                </div>
+            </div> <!--id=main-->
+            <div id="main2">
+                <div>
+                    <h4>
+                        <p>
+                            상품명 : 에디오피아 게댑<br>
+                            판매가 : 9,000원<br>
+                            배송비 : 3,000원<br>
+                            (50,000원 이상 구매시 무료)<br>
+                            적립금 : 180원(2%)<br>
+                            로스팅 : 2019.06.17<br>
+                        </p>
+                    </h4>
+                </div>
+                <div>
+                    <button>장바구니 담기</button>
+                </div>
+                <div id="detail">
+                    <h4>상세 설명 보기</h4>
+                </div>
+            </div> <!--id=main2-->
+
+        </div>    
+
+    </div> <!-- id=wrap -->
+        <script>
+            
+            function displaySrc(element){
+                let cup = document.querySelector("#cup");
+                alert("이미지 소스: "+cup.getAttribute("src"));
+            }
+            function changePic(element) { 
+                let cup = document.querySelector("#cup");
+                let newPic = element.src; 
+                cup.setAttribute("src", newPic);
+            } 
+
+        </script>
+
+
+
+</body>
+</html>

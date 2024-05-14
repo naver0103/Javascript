@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input_height = prompt("원기둥의 세로의 길이를 입력하세요.");
+        let input_radius = prompt("원기둥의 반지름을 입력하세요.");
+
+        input_height =parseFloat(input_height);
+        input_radius =parseFloat(input_radius);
+
+        result =input_height * (input_radius*input_radius) * Math.PI;
+
+        document.write("원기둥의 부피는 "+result+"입니다.");
+
+
+    </script>
+    
+</body>
+</html>

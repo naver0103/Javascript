@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>키이벤트</title>
+    <style>
+        label{
+            width:100px;
+            display: inline-block;     
+        }
+        span{
+            color:red;
+        }
+    </style>
+
+</head>
+<body>
+    <p><label for= "height"><span>*</span>키</label><input type="number" name="num" id="num" required onkeyup="mykeyup()"></p>
+    <p><label for= "weight"><span>*</span>몸무게</label>
+        <input type="number" name="num" id="num" required onkeyup="mykeyup()"></p>
+    <p><label for= "total">BMI</label>
+        <input type="number" name="num" id="num" readonly></p>
+
+    <script>
+        function mykeyup(){
+            let numTag = document.querySelectorAll("input");
+            numTag[0];//키 input
+            numTag[0].value;//유저가 입력한 키
+            numTag[1];//몸무게 input
+            numTag[1].value;//유저가 입력한 몸무게
+
+            if( numTag[0].value="" || numTag[1].value==""){
+                return;
+            }
+            numTag[2].value = numTag[0].value*numTag[1].value;
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

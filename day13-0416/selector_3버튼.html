@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>버튼 3개</title>
+    <style>
+        button{
+            color: white;
+            width:80px;
+            height:30px;
+            border:none;
+            border-radius: 5px; /* 테두리를 둥글게 만듦 */           
+        }
+        #Green{
+            color: green;
+            display: inline-block;
+        }
+        #Orange{
+            color: orange;
+            display: inline-block;
+        }
+        #Purple{
+            color: purple;
+            display: inline-block;
+        }
+        #btnLarge{
+            width:450px;
+            height:200px; 
+            background-color:beige;
+            margin-top: 5px;          
+        }       
+
+    </style>
+</head>
+<body>
+    
+        <div id="Green">
+            <button>Green</button>
+        </div>
+
+        <div id="Orange">
+            <button>Orange</button>
+        </div>
+
+        <div id="Purple">
+            <button>Purple</button>
+        </div>
+
+        <div >
+            <button id="btnLarge"></button>
+        </div>
+
+    <script>
+
+        let btnNodeList = document.querySelectorAll("button");
+        // let color = [green, orange, purple, beige]
+        btnNodeList[0].style.backgroundColor="green";   
+        btnNodeList[1].style.backgroundColor="orange";   
+        btnNodeList[2].style.backgroundColor="purple"; 
+        btnNodeList[3].style.backgroundColor="beige"; 
+        btnNodeList.color="white";
+
+        for(let i=0; i<3; i++){
+            btnNodeList[i].onclick=function(){
+                    btnNodeList[3].style.backgroundColor=btnNodeList[i].style.backgroundColor;
+
+                };
+    
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

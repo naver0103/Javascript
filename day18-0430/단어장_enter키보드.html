@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어장</title>
+</head>
+<body>
+    <h1>단어장</h1>
+        <p>영어단어장을 만들어봅시다.</p>
+        <p>다 외운 단어는 클릭해서 삭제할 수 있습니다.</p>
+    <input type = "text" id = "input" name = "input" autofocus>
+    <button>추가</button>
+    <hr>
+    <ul>
+    </ul>     
+    <script>
+        let inputForKey = document.getElementById("input");
+        inputForKey.addEventListener("keydown", function(event){
+            if( event.keyCode == 13) //ENTER의 값.
+                process();
+        });
+        let btns = document.getElementsByTagName("button");
+        btns[0].addEventListener("click", process);
+
+        function process() {           
+            let input = document.getElementById("input");           //input창의 값을 가져와서
+            input.value;             
+            let newLi = document.createElement("li");               //li의 항목으로 요소를 생성하고                  
+            let textNode = document.createTextNode(input.value);
+            newLi.appendChild(textNode);                            //li의 자손으로 텍스트노드를 생성하고 append하고       
+            let uls = document.getElementsByTagName("ul");          //ul의 부모에 append하자
+            uls[0].appendChild(newLi);
+            uls[0].insertBefore(newLi, uls[0].firstChild);
+            input.value="";
+            newLi.addEventListener("click", function(){
+                //만든 li를 삭제해주세요.
+                uls[0].removeChild(newLi);
+            });
+        };
+    </script>   
+</body>
+</html>
+
+
+
